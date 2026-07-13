@@ -20,6 +20,7 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
   
   <body class="bg-neutral-950 text-neutral-50 font-['Inter'] antialiased selection:bg-orange-500 selection:text-white relative">
     
+    <!-- Navbar Fija -->
     <nav class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
       <div class="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar">
         <ul class="flex items-center gap-8 py-4 text-sm font-medium text-neutral-400 whitespace-nowrap">
@@ -29,15 +30,17 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
           <li><a href="#musica" class="hover:text-orange-500 transition-colors">Música</a></li>
           <li><a href="#media" class="hover:text-orange-500 transition-colors">Media</a></li>
           <li><a href="#proyectos" class="hover:text-orange-500 transition-colors">Proyectos</a></li>
-          <li><a href="#setup" class="hover:text-orange-500 transition-colors">Mi Setup</a></li>
+          <li><a href="#setup" class="hover:text-orange-500 transition-colors">Setup</a></li>
           <li><a href="#shows" class="hover:text-orange-500 transition-colors">Shows</a></li>
           <li><a href="#contactos" class="hover:text-orange-500 transition-colors">Contactos</a></li>
         </ul>
       </div>
     </nav>
 
+    <!-- Efecto Glow de fondo -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-600/20 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
+    <!-- HOME -->
     <header id="home" class="min-h-screen flex flex-col justify-center items-center relative px-6 text-center pt-20">
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-20"></div>
       
@@ -54,6 +57,7 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
       </div>
     </header>
 
+    <!-- CURSOS (Próximamente) -->
     <section id="cursos" class="py-24 px-6 max-w-4xl mx-auto border-t border-neutral-900" data-aos="fade-up">
       <div class="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-[2rem] p-12 text-center relative overflow-hidden">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm font-medium text-orange-400 mb-6">
@@ -66,6 +70,7 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
       </div>
     </section>
 
+    <!-- BIO -->
     <section id="bio" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-right">
@@ -77,63 +82,119 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
             Como educador, busco que el alumno encuentre su propia voz en el instrumento, dominando la armonía, el micro-time y el control total del groove.
           </p>
         </div>
-        <div data-aos="fade-left" class="bg-neutral-800 rounded-[2rem] border border-neutral-700 aspect-square flex items-center justify-center">
-          <span class="text-neutral-500">[Foto Retrato de Leandro]</span>
+        <div data-aos="fade-left" class="bg-neutral-800 rounded-[2rem] border border-neutral-700 aspect-square overflow-hidden">
+          <img 
+            src="/bio-leandro.jpg" 
+            alt="Retrato de Leandro Pagura" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
         </div>
       </div>
     </section>
 
+    <!-- MÚSICA (Spotify Embed) -->
     <section id="musica" class="py-24 px-6 max-w-4xl mx-auto border-t border-neutral-900" data-aos="fade-up">
       <h2 class="text-4xl font-bold tracking-tight mb-8">Música</h2>
       <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/0Mfv0jLx7lR1vpip9uQJcs?utm_source=generator&si=5d8214c5409f422d" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
 
+    <!-- MEDIA (Galería) -->
     <section id="media" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" data-aos="fade-up">
       <h2 class="text-4xl font-bold tracking-tight mb-8">Media</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="bg-neutral-800 aspect-square rounded-xl border border-neutral-700 flex items-center justify-center"><span class="text-neutral-500 text-sm">Foto 1</span></div>
-        <div class="bg-neutral-800 aspect-square rounded-xl border border-neutral-700 flex items-center justify-center"><span class="text-neutral-500 text-sm">Foto 2</span></div>
-        <div class="bg-neutral-800 aspect-video md:aspect-square rounded-xl border border-neutral-700 flex items-center justify-center col-span-2 md:col-span-1"><span class="text-neutral-500 text-sm">Video YT</span></div>
+        <!-- Foto 1 -->
+        <div class="bg-neutral-800 aspect-square rounded-xl border border-neutral-700 overflow-hidden">
+          <img src="/show-1.jpg" alt="Leandro en vivo" class="w-full h-full object-cover hover:opacity-80 transition-opacity" />
+        </div>
+        <!-- Foto 2 -->
+        <div class="bg-neutral-800 aspect-square rounded-xl border border-neutral-700 overflow-hidden">
+          <img src="/show-2.jpg" alt="Grabación en estudio" class="w-full h-full object-cover hover:opacity-80 transition-opacity" />
+        </div>
+        <!-- Foto 3 -->
+        <div class="bg-neutral-800 aspect-video md:aspect-square rounded-xl border border-neutral-700 overflow-hidden col-span-2 md:col-span-1">
+          <img src="/show-3.jpg" alt="Leandro Pagura Cuarteto" class="w-full h-full object-cover hover:opacity-80 transition-opacity" />
+        </div>
       </div>
     </section>
 
+    <!-- PROYECTOS (Estilo Bento / Integrado al resto de la web) -->
     <section id="proyectos" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" data-aos="fade-up">
       <h2 class="text-4xl font-bold tracking-tight mb-8">Proyectos Actuales</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-8 rounded-[2rem] bg-neutral-900 border border-neutral-800 hover:border-orange-500/50 transition-colors">
-          <h3 class="text-2xl font-bold mb-2 text-neutral-200">Mi Primera Mitad</h3>
-          <p class="text-neutral-400">Proyecto solista enfocado en la fusión, el jazz contemporáneo y composiciones propias.</p>
+      
+      <!-- Contenedor principal con los mismos bordes redondeados y fondo de la web -->
+      <div class="bg-neutral-900/50 backdrop-blur-md border border-neutral-800 rounded-[2rem] overflow-hidden grid md:grid-cols-2 hover:border-neutral-700 transition-colors">
+        
+        <!-- Lado Izquierdo: Foto contenida -->
+        <div class="relative h-[300px] md:h-auto overflow-hidden">
+          <img 
+            src="/foto-cuarteto.jpg" 
+            alt="Leandro Pagura Cuarteto" 
+            class="absolute inset-0 w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 hover:scale-105 transition-all duration-700"
+          />
         </div>
-        <div class="p-8 rounded-[2rem] bg-neutral-900 border border-neutral-800 hover:border-orange-500/50 transition-colors">
-          <h3 class="text-2xl font-bold mb-2 text-neutral-200">Cuarteto Jazz / Funk</h3>
-          <p class="text-neutral-400">Ensamble estable explorando los límites del groove moderno y la improvisación colectiva.</p>
+        
+        <!-- Lado Derecho: Textos alineados al estilo de la página -->
+        <div class="flex flex-col justify-center p-10 md:p-14">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-950 border border-neutral-800 text-xs font-medium text-neutral-400 mb-6 w-max">
+            Ensamble Principal
+          </div>
+          
+          <h3 class="text-3xl font-bold text-neutral-200 mb-4 tracking-tight">
+            Cuarteto Jazz/Funk
+          </h3>
+          
+          <p class="text-neutral-400 leading-relaxed mb-8 text-lg">
+            Un colectivo musical liderado por Leandro, explorando la fusión dinámica del jazz eléctrico y el funk. Composiciones intrincadas e improvisaciones espontáneas que empujan los límites musicales de la escena contemporánea.
+          </p>
+          
+          <div>
+            <!-- Botón integrado al estilo principal (naranja) -->
+            <a href="#musica" class="inline-block px-6 py-3 bg-neutral-950 border border-neutral-800 text-neutral-300 rounded-full hover:border-orange-500 hover:text-orange-400 transition-all duration-300 font-medium text-sm">
+              Escuchar material
+            </a>
+          </div>
         </div>
+
       </div>
     </section>
 
+    <!-- MI EQUIPO -->
+    <!-- SETUP -->
     <section id="setup" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" data-aos="fade-up">
-      <h2 class="text-4xl font-bold tracking-tight mb-8">Mi Setup</h2>
+      <h2 class="text-4xl font-bold tracking-tight mb-8">Setup</h2>
       <div class="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-[2rem] p-10">
         <ul class="space-y-4 text-lg text-neutral-400">
-          <li class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-            <strong>Procesamiento:</strong> Helix Quad Cortex (Emulaciones, modulaciones y ruteo directo).
+          
+          <li class="flex items-start gap-4">
+            <span class="w-2 h-2 rounded-full bg-orange-500 shrink-0 mt-2"></span>
+            <p>
+              <strong class="text-neutral-200">Procesamiento:</strong> Helix Quad Cortex (Emulaciones, modulaciones y ruteo directo).
+            </p>
           </li>
-          <li class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-            <strong>Instrumentos:</strong> Bajos pasivos estilo Precision Bass/SWAN CUSTOM BASSES - ALPHA CLASSIC “Red Fury” by Leandro Pagura signature.
+          
+          <li class="flex items-start gap-4">
+            <span class="w-2 h-2 rounded-full bg-orange-500 shrink-0 mt-2"></span>
+            <p>
+              <strong class="text-neutral-200">Instrumentos:</strong> Bajos pasivos estilo Precision Bass / SWAN CUSTOM BASSES - ALPHA CLASSIC “Red Fury” by Leandro Pagura signature.
+            </p>
           </li>
-          <li class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-            <strong>Amplificación:</strong> Sistemas Full Range (FRFR) / Equipos Clase D modernos.
+          
+          <li class="flex items-start gap-4">
+            <span class="w-2 h-2 rounded-full bg-orange-500 shrink-0 mt-2"></span>
+            <p>
+              <strong class="text-neutral-200">Amplificación:</strong> Sistemas Full Range (FRFR) / Equipos Clase D modernos.
+            </p>
           </li>
+
         </ul>
       </div>
     </section>
 
+    <!-- SHOWS -->
     <section id="shows" class="py-24 px-6 max-w-4xl mx-auto border-t border-neutral-900" data-aos="fade-up">
       <h2 class="text-4xl font-bold tracking-tight mb-8">Próximos Shows</h2>
       <div class="divide-y divide-neutral-800">
+        <!-- Show 1 -->
         <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-neutral-900/30 px-4 rounded-xl transition-colors">
           <div>
             <p class="text-orange-400 font-bold">15 AGO, 2026</p>
@@ -142,6 +203,7 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
           </div>
           <button class="px-6 py-2 border border-neutral-700 rounded-full hover:bg-neutral-100 hover:text-neutral-950 transition-colors font-medium">Tickets</button>
         </div>
+        <!-- Show 2 -->
         <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-neutral-900/30 px-4 rounded-xl transition-colors">
           <div>
             <p class="text-orange-400 font-bold">28 SEP, 2026</p>
@@ -153,12 +215,14 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
       </div>
     </section>
 
+    <!-- CONTACTOS -->
     <footer id="contactos" class="py-24 text-center border-t border-neutral-900 mt-12" data-aos="fade-in">
       <p class="text-neutral-500 font-light mb-4">¿Listo para mejorar tu groove o agendar una sesión?</p>
-      <a href="mailto:leandro@email.com" class="text-4xl md:text-6xl font-black text-neutral-300 hover:text-orange-500 tracking-tighter transition-colors block mb-12">
+      <a href="mailto:contacto@email.com" class="text-4xl md:text-6xl font-black text-neutral-300 hover:text-orange-500 tracking-tighter transition-colors block mb-12">
         contacto@email.com
       </a>
       
+      <!-- Redes Sociales -->
       <div class="flex justify-center gap-6 mb-12">
         <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors">Instagram</a>
         <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors">YouTube</a>
@@ -170,6 +234,7 @@ const pageTitle = "Leandro Pagura | Bajista & Educador";
       </p>
     </footer>
 
+    <!-- Animaciones AOS -->
     <script>
       import AOS from 'aos';
       import 'aos/dist/aos.css';
