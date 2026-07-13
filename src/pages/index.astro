@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css'; 
-const pageTitle = "Leandro Pagura | Bajista, Sesionista & Educador";
+const pageTitle = "Leandro Pagura | Bajista & Educador";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -11,113 +11,163 @@ const pageTitle = "Leandro Pagura | Bajista, Sesionista & Educador";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      /* Oculta la barra de scroll en el menú para móviles, pero permite deslizar */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
   </head>
   
   <body class="bg-neutral-950 text-neutral-50 font-['Inter'] antialiased selection:bg-orange-500 selection:text-white relative">
     
+    <nav class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar">
+        <ul class="flex items-center gap-8 py-4 text-sm font-medium text-neutral-400 whitespace-nowrap">
+          <li><a href="#home" class="hover:text-orange-500 transition-colors">Home</a></li>
+          <li><a href="#cursos" class="hover:text-orange-500 transition-colors">Cursos</a></li>
+          <li><a href="#bio" class="hover:text-orange-500 transition-colors">Bio</a></li>
+          <li><a href="#musica" class="hover:text-orange-500 transition-colors">Música</a></li>
+          <li><a href="#media" class="hover:text-orange-500 transition-colors">Media</a></li>
+          <li><a href="#proyectos" class="hover:text-orange-500 transition-colors">Proyectos</a></li>
+          <li><a href="#equipo" class="hover:text-orange-500 transition-colors">Mi Equipo</a></li>
+          <li><a href="#shows" class="hover:text-orange-500 transition-colors">Shows</a></li>
+          <li><a href="#contactos" class="hover:text-orange-500 transition-colors">Contactos</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-600/20 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
-    <header class="min-h-screen flex flex-col justify-center items-center relative px-6 text-center">
+    <header id="home" class="min-h-screen flex flex-col justify-center items-center relative px-6 text-center pt-20">
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-20"></div>
       
       <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-sm font-medium text-orange-400 mb-8 shadow-lg">
-          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          Clases & Masterclasses 2026
-        </div>
-        
-        <h1 class="text-7xl md:text-9xl font-black tracking-tighter mb-6 leading-none">
+        <h1 class="text-7xl md:text-9xl font-black tracking-tighter mb-6 leading-none mt-12">
           LEANDRO <br/>
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">
             PAGURA
           </span>
         </h1>
         <p class="text-xl font-light text-neutral-400 max-w-2xl mx-auto mb-10">
-          Bajista, sesionista y educador. Más de 20 años marcando el groove y la solidez en la escena musical nacional e internacional.
+          Bajista, sesionista y educador. Groove y solidez en la escena musical nacional e internacional.
         </p>
-        
-        <a href="#contacto" class="inline-block bg-orange-500 text-neutral-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-400 hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] transition-all duration-300">
-          Agendar una clase
-        </a>
       </div>
     </header>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-6">
-        
-        <div data-aos="fade-up" class="md:col-span-8 bg-neutral-900/50 backdrop-blur-md border border-neutral-800 rounded-[2rem] p-10 hover:border-neutral-700 transition-colors">
-          <h2 class="text-3xl font-bold tracking-tight mb-6">Trayectoria & Enfoque</h2>
-          <p class="text-neutral-400 leading-relaxed mb-6 text-lg">
-            Con más de dos décadas de carrera, mi enfoque une la solidez del bajista de sesión con la libertad expresiva de la improvisación. A lo largo de mi camino, he tenido el inmenso privilegio de compartir escenarios y grabar con figuras legendarias, como el gran percusionista Alex Acuña, Ezequiel Ghilardi y Álvaro Manzanero.
-          </p>
-          <p class="text-neutral-400 leading-relaxed text-lg">
-            Como educador, mis clases están orientadas a que encuentres tu propia voz. Vamos a trabajar profundamente la armonía, el desarrollo de escalas y, por sobre todo, el micro-time y el control del groove para cualquier contexto profesional.
-          </p>
-        </div>
-        
-        <div data-aos="fade-left" data-aos-delay="200" class="md:col-span-4 bg-neutral-800 rounded-[2rem] border border-neutral-700 aspect-square md:aspect-auto flex items-center justify-center relative overflow-hidden group">
-          <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 to-transparent z-10"></div>
-          <span class="text-neutral-500 font-medium z-20 group-hover:scale-110 transition-transform duration-500 px-4 text-center">
-            [Foto de Leandro tocando en vivo]
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section data-aos="fade-up" class="py-24 px-6 max-w-4xl mx-auto">
-      <div class="mb-12 flex items-end justify-between border-b border-neutral-800 pb-6">
-        <div>
-          <h2 class="text-4xl font-black tracking-tight mb-2">Mi Primera Mitad</h2>
-          <p class="text-neutral-500 font-light">Primer trabajo discográfico solista</p>
-        </div>
-      </div>
-
-      <div class="space-y-2">
-        <div class="group flex items-center justify-between p-4 rounded-xl hover:bg-neutral-900/50 transition-colors cursor-pointer border border-transparent hover:border-neutral-800">
-          <div class="flex items-center gap-6">
-            <span class="text-neutral-600 font-mono text-sm w-4">01</span>
-            <button class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-neutral-950 transition-colors shrink-0">
-              <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-            <div>
-              <h3 class="font-bold text-neutral-200 group-hover:text-orange-400 transition-colors">Track Destacado (ft. Alex Acuña)</h3>
-              <p class="text-sm text-neutral-500 font-light">Leandro Pagura</p>
-            </div>
-          </div>
-          <span class="text-neutral-600 font-mono text-sm group-hover:text-neutral-400 transition-colors">04:30</span>
-        </div>
-
-        <div class="group flex items-center justify-between p-4 rounded-xl hover:bg-neutral-900/50 transition-colors cursor-pointer border border-transparent hover:border-neutral-800">
-          <div class="flex items-center gap-6">
-            <span class="text-neutral-600 font-mono text-sm w-4">02</span>
-            <button class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-neutral-950 transition-colors shrink-0">
-              <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-            <div>
-              <h3 class="font-bold text-neutral-200 group-hover:text-orange-400 transition-colors">Sesión en Vivo</h3>
-              <p class="text-sm text-neutral-500 font-light">Leandro Pagura Cuarteto</p>
-            </div>
-          </div>
-          <span class="text-neutral-600 font-mono text-sm group-hover:text-neutral-400 transition-colors">05:12</span>
-        </div>
-      </div>
-    </section>
-
-    <section data-aos="fade-up" class="py-12 px-6 max-w-6xl mx-auto">
+    <section id="cursos" class="py-24 px-6 max-w-4xl mx-auto border-t border-neutral-900" data-aos="fade-up">
       <div class="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-[2rem] p-12 text-center relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[80px] rounded-full pointer-events-none"></div>
-        <h2 class="text-3xl font-bold tracking-tight mb-6 relative z-10">El Sonido</h2>
-        <p class="text-lg font-light text-neutral-400 max-w-3xl mx-auto leading-relaxed relative z-10">
-          Para abordar tanto sesiones de estudio exigentes como shows en vivo, la versatilidad es innegociable. Uso bajos de alta gama procesados mediante un <span class="text-neutral-200 font-medium">helix quad cortex</span> para asegurar modulaciones, precisión y emulaciones vintage impecables directo a consola.
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm font-medium text-orange-400 mb-6">
+          Próximamente
+        </div>
+        <h2 class="text-4xl font-bold tracking-tight mb-4">Plataforma de Cursos</h2>
+        <p class="text-neutral-400 leading-relaxed max-w-2xl mx-auto">
+          Estamos desarrollando un espacio exclusivo para que puedas acceder a masterclasses, desarrollo de técnica, estudio de escalas complejas y rutinas de práctica donde sea que estés.
         </p>
       </div>
     </section>
 
-    <footer id="contacto" class="py-24 text-center border-t border-neutral-900 mt-12">
-      <p class="text-neutral-500 font-light mb-4">¿Listo para estudiar conmigo?</p>
-      <a href="mailto:leandro@email.com" class="text-4xl md:text-6xl font-black text-neutral-300 hover:text-orange-500 tracking-tighter transition-colors">
+    <section id="bio" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-bold tracking-tight mb-6">Biografía</h2>
+          <p class="text-neutral-400 leading-relaxed mb-6 text-lg">
+            Con más de dos décadas de carrera, mi enfoque une la solidez del bajista de sesión con la libertad expresiva de la improvisación. He tenido el inmenso privilegio de compartir escenarios y grabar con figuras legendarias, marcando el pulso en innumerables proyectos.
+          </p>
+          <p class="text-neutral-400 leading-relaxed text-lg">
+            Como educador, busco que el alumno encuentre su propia voz en el instrumento, dominando la armonía, el micro-time y el control total del groove.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="bg-neutral-800 rounded-[2rem] border border-neutral-700 aspect-square flex items-center justify-center">
+          <span class="text-neutral-500">[Foto Retrato de Leandro]</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="musica" class="py-24 px-6 max-w-4xl mx-auto border-t border-neutral-900" data-aos="fade-up">
+      <h2 class="text-4xl font-bold tracking-tight mb-8">Música</h2>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/03fNqXhK2IovQ3zL1s1t3w?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <section id="media" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" data-aos="fade-up">
+      <h2 class="text-4xl font-bold tracking-tight mb-8">Media</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-neutral-800 aspect-square rounded-xl border border-neutral-700 flex items-center justify-center"><span class="text-neutral-500 text-sm">Foto 1</span></div>
+        <div class="bg-neutral-800 aspect-square rounded-xl border border-neutral-700 flex items-center justify-center"><span class="text-neutral-500 text-sm">Foto 2</span></div>
+        <div class="bg-neutral-800 aspect-video md:aspect-square rounded-xl border border-neutral-700 flex items-center justify-center col-span-2 md:col-span-1"><span class="text-neutral-500 text-sm">Video YT</span></div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" data-aos="fade-up">
+      <h2 class="text-4xl font-bold tracking-tight mb-8">Proyectos Actuales</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-8 rounded-[2rem] bg-neutral-900 border border-neutral-800 hover:border-orange-500/50 transition-colors">
+          <h3 class="text-2xl font-bold mb-2 text-neutral-200">Mi Primera Mitad</h3>
+          <p class="text-neutral-400">Proyecto solista enfocado en la fusión, el jazz contemporáneo y composiciones propias.</p>
+        </div>
+        <div class="p-8 rounded-[2rem] bg-neutral-900 border border-neutral-800 hover:border-orange-500/50 transition-colors">
+          <h3 class="text-2xl font-bold mb-2 text-neutral-200">Cuarteto Jazz / Funk</h3>
+          <p class="text-neutral-400">Ensamble estable explorando los límites del groove moderno y la improvisación colectiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipo" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" data-aos="fade-up">
+      <h2 class="text-4xl font-bold tracking-tight mb-8">Mi Equipo</h2>
+      <div class="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-[2rem] p-10">
+        <ul class="space-y-4 text-lg text-neutral-400">
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <strong>Procesamiento:</strong> Line 6 HX Stomp (Emulaciones, modulaciones y ruteo directo).
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <strong>Instrumentos:</strong> Bajos pasivos estilo Jazz/Precision Bass para un tono orgánico.
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <strong>Amplificación:</strong> Sistemas Full Range (FRFR) / Equipos Clase D modernos.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="shows" class="py-24 px-6 max-w-4xl mx-auto border-t border-neutral-900" data-aos="fade-up">
+      <h2 class="text-4xl font-bold tracking-tight mb-8">Próximos Shows</h2>
+      <div class="divide-y divide-neutral-800">
+        <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-neutral-900/30 px-4 rounded-xl transition-colors">
+          <div>
+            <p class="text-orange-400 font-bold">15 AGO, 2026</p>
+            <h3 class="text-xl font-bold text-neutral-200">Presentación "Mi Primera Mitad"</h3>
+            <p class="text-neutral-500">Sala Lavardén, Rosario</p>
+          </div>
+          <button class="px-6 py-2 border border-neutral-700 rounded-full hover:bg-neutral-100 hover:text-neutral-950 transition-colors font-medium">Tickets</button>
+        </div>
+        <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-neutral-900/30 px-4 rounded-xl transition-colors">
+          <div>
+            <p class="text-orange-400 font-bold">28 SEP, 2026</p>
+            <h3 class="text-xl font-bold text-neutral-200">Leandro Pagura Cuarteto</h3>
+            <p class="text-neutral-500">Complejo Cultural Atlas, Rosario</p>
+          </div>
+          <button class="px-6 py-2 border border-neutral-700 rounded-full hover:bg-neutral-100 hover:text-neutral-950 transition-colors font-medium">Tickets</button>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contactos" class="py-24 text-center border-t border-neutral-900 mt-12" data-aos="fade-in">
+      <p class="text-neutral-500 font-light mb-4">¿Listo para mejorar tu groove o agendar una sesión?</p>
+      <a href="mailto:leandro@email.com" class="text-4xl md:text-6xl font-black text-neutral-300 hover:text-orange-500 tracking-tighter transition-colors block mb-12">
         contacto@email.com
       </a>
+      
+      <div class="flex justify-center gap-6 mb-12">
+        <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors">Instagram</a>
+        <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors">YouTube</a>
+        <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors">Spotify</a>
+      </div>
+      
+      <p class="text-sm opacity-50 text-neutral-600">
+        © 2026 Leandro Pagura. Desarrollado en Astro.
+      </p>
     </footer>
 
     <script>
